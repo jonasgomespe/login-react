@@ -6,6 +6,8 @@ export default function TelaLogin(){
     const [nomeUsuario, setNomeUsuario]    = useState('');
     const [senhaUsuario, setSenhaUsuario]  = useState('');
     
+    console.log('1');
+
     function digitacaoInput(e:any,tipo?:string){
 
         if(tipo == 'login')
