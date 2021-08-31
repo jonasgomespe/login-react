@@ -1,32 +1,25 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './TelaLogin.css';
+import Input from '../FormComponents/Input/Inputs';
+import Button from '../FormComponents/Button/Button';
 
 export default function TelaLogin(){
 
-    const [nomeUsuario, setNomeUsuario]    = useState('');
-    const [senhaUsuario, setSenhaUsuario]  = useState('');
-    
-    console.log('1');
-
-    function digitacaoInput(e:any,tipo?:string){
-
-        if(tipo == 'login')
-            setNomeUsuario(e.target.value);
-
-        if(tipo == 'senha')
-            setSenhaUsuario(e.target.value);
-
-    }
-
     function defaultForm(event:any){
+
         event.preventDefault();
+        
+        //const formLogin          = new FormData(event.target);
+        //const dadosFormulario    = Object.fromEntries(formLogin);
+        /* let {nome, login, senha} = dadosFormulario; */
+        
     }
 
     return (
         <div className="container-login">
             <div className="alinhamento">
                 <div>
-                    <form name="form-login" onSubmit={(event)=>defaultForm(event)}>
+                    <form name="form-login" id="form-login" onSubmit={(event)=>defaultForm(event)}>
                         <div>
                                 <h1>
                                     Área de usuários
@@ -35,15 +28,12 @@ export default function TelaLogin(){
                                     Sistema de gerencimento de funcionarios da empresa em geral
                                 </h4>
                         </div>
-                        <div>
-                            <input type="text" name="sd" value={nomeUsuario} onChange={(e)=>digitacaoInput(e,'login')} placeholder=" Insira seu nome " id="sd" />
-                        </div>
-                        <div>
-                            <input type="password" name="fe" value={senhaUsuario} onChange={(e)=>digitacaoInput(e,'senha')} placeholder=" Insira sua senha " id="fe" />
-                        </div>
-                        <div>
-                            <input type="submit" value=" Entrar " id="yui" />
-                        </div>
+
+                        <Input typeInput="text" name="Jonas gomes" placeholder=" Insira seu login " />
+                        <Input typeInput="password" name="Teia" placeholder=" Insira sua senha " />
+                        <Input typeInput="number" name="Yasmim" placeholder=" Insira sua vamos nessa " />
+
+                        <Button type="submit" title=" Entrar " />
                     </form>
                 </div>
             </div>

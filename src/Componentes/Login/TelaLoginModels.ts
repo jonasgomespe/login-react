@@ -4,3 +4,6 @@ export interface TelaLoginModels {
     User:string,
     Password:string
 }
+
+
+
