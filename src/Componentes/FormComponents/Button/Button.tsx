@@ -6,7 +6,7 @@ export default function Button(props:any){
     
     return (
         <div>
-            <button { ...type ? type : null }>{title}</button>
+            <button { ...type ? type : '' }>{title}</button>
         </div>
     )
 }
