@@ -31,8 +31,6 @@ export default function TelaLogin(){
 
                         <Input typeInput="text" name="Jonas gomes" placeholder=" Insira seu login " />
                         <Input typeInput="password" name="Teia" placeholder=" Insira sua senha " />
-                        <Input typeInput="number" name="Yasmim" placeholder=" Insira sua vamos nessa " />
-
                         <Button type="submit" title=" Entrar " />
                     </form>
                 </div>
